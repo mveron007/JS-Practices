@@ -11,6 +11,7 @@ _Este es un repositorio destinado a subir prácticas realizadas en JavaScript pa
 ## Wiki 📖
 
 El proyecto tiene una página principal en la cual se puede redirigir a cada uno de los proyectos de práctica.
+Ingrese a la siguiente página [Mi página de Proyectos](https://mveron007.github.io/JS-Practices/)
 
 ## Autor ✒️
 
