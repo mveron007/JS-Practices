@@ -13,10 +13,10 @@
     <div class="d-flex justify-content-center mt-5 mb-3">
         <h1>Administrador de pacientes de Veterinaria</h1>
     </div>
-    <div class="container shadow-lg p-3 mb-5 bg-body rounded mt-5">
+    <div id="contenido" class="container shadow-lg p-3 mb-5 bg-body rounded mt-5">
         
         <div class="row">
-            <div class="col">
+            <div id="datos-paciente" class="col">
                 <h3 class="mb-3">Datos del paciente</h3>
 
                 <form id ="formulario" action="">
@@ -51,7 +51,7 @@
                     </div>
 
                     <div>
-                        <button type="submit" class="btn btn-primary btn-lg w-100">Crear cita</button>
+                        <button type="submit" id="btnCita" class="btn btn-primary btn-lg w-100">Crear cita</button>
                     </div>
                 </form>
 
@@ -59,7 +59,8 @@
             <div class="col">
                 <h3>Administra tus citas</h3>
 
-                <ul id="citas" class="list-group"></ul>
+                <!-- <ul id="citas" class="list-group"></ul> -->
+                <div id="citas" class="card-group"></div>
 
             </div>
         </div>
