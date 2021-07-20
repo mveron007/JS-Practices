@@ -17,9 +17,21 @@
   header {
       height: 230px !important;
   }
+
+  #loading-img{
+    width: 300px !important;
+    height: 300px !important;
+}
 }
 
-
+*{
+    overflow-x: hidden;
+    margin: 0;
+    box-sizing: border-box;
+}
+.bg-init{
+    background: rgb(255, 167, 51);
+}
 body {
   margin: 0;
   padding: 0;
@@ -47,87 +59,116 @@ svg {
 section {
   margin: 5% 10%;
 }
+
+#loading-img{
+    width: 500px;
+    height: 500px;
+}
 </style>
-<body>
+<body class="bg-init">
 
-    <header>
-        <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="-300 0 950 270" >
-          <path d="M-314,267 C105,364 400,100 812,279" fill="none" stroke="white" stroke-width="120" stroke-linecap="round"/>
-        </svg>
-
-        <div class="row d-flex justify-content-center">
-            <div class="alert alert-light float-end shadow p-3 mb-3 mt-3 bg-body rounded d-flex me-3 w-75" role="alert">
-                <img src="images/logo-index.jpeg" width="60px" height="48px" alt="" srcset="">
-                <span class="p-2">Hola visitante!</span>
-            </div>
+    <div id="loading">
+        <div class="d-flex justify-content-center mt-5">
+            <img src="images/loading-me.gif" id="loading-img" class="shadow-lg  mb-5 bg-body rounded-circle" alt="" srcset="">
         </div>
-
-        <div class="d-flex justify-content-center mt-5 mb-3">
-            <h1 style="font-family: 'Anton', sans-serif;">JS-Practices</h1>
-
-        </div>
+        <span id="loading-text" class="d-flex justify-content-center fw-bold text-white">Espere...</span>
+    </div>
     
-      </header>
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-sm-12">
-                <div class="portfolio-overlay card text-white shadow p-3 mb-5 bg-body rounded" onmouseover="visibleOverlay(this)">
-                    <img src="images/presupuesto.png" class="card-img" alt="...">
-                    <a href="proyecto-presupuesto/index.html" class="card-img-overlay d-none text-decoration-none text-white text-center" style="background-color: rgba(87, 98, 119, 0.35);">
-                      <h5 class="mt-4 card-title">Administrador de Gastos</h5>
-                      <span class="badge rounded-pill bg-dark">
-                          <i class="bi bi-link-45deg"></i>
-                      </span>
-                    </a>
+    <div id="content-body" class="d-none">
+        <header>
+            <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="-300 0 950 270" >
+            <path d="M-314,267 C105,364 400,100 812,279" fill="none" stroke="white" stroke-width="120" stroke-linecap="round"/>
+            </svg>
 
+            <div class="row d-flex justify-content-center">
+                <div class="alert alert-light float-end shadow p-3 mb-3 mt-3 bg-body rounded d-flex me-3 w-75" role="alert">
+                    <img src="images/logo-index.jpeg" width="60px" height="48px" alt="" srcset="">
+                    <span class="p-2">Hola visitante!</span>
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-12">
-                <div class="portfolio-overlay card shadow p-3 mb-5 bg-body rounded" onmouseover="visibleOverlay(this)">
-                    <img src="images/buscador-autos.png" class="card-img" alt="...">
-                    <a href="proyecto-buscador/index.html" class="card-img-overlay d-none text-decoration-none text-white text-center" style="background-color: rgba(87, 98, 119, 0.35);">
-                      <h5 class="mt-4 card-title">Buscador de Autos</h5>
-                      <span class="badge rounded-pill bg-dark">
-                          <i class="bi bi-link-45deg"></i>
-                      </span>
-                    </a>
-                </div>
+            <div class="d-flex justify-content-center mt-4 mb-3">
+                <span class="fs-1 text-white" style="font-family: 'Anton', sans-serif;">JS-Practices</span>
+
             </div>
+        
+        </header>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <div class="portfolio-overlay card text-white shadow p-3 mb-5 bg-body rounded" onmouseover="visibleOverlay(this)">
+                        <img src="images/presupuesto.png" class="card-img" alt="...">
+                        <a href="proyecto-presupuesto/index.html" class="card-img-overlay d-none text-decoration-none text-white text-center" style="background-color: rgba(87, 98, 119, 0.35);">
+                        <h5 class="mt-4 card-title">Administrador de Gastos</h5>
+                        <span class="badge rounded-pill bg-dark">
+                            <i class="bi bi-link-45deg"></i>
+                        </span>
+                        </a>
 
-
-            <div class="col-md-4 col-sm-12">
-                <div class="portfolio-overlay card text-white shadow p-3 mb-5 bg-body rounded" onmouseover="visibleOverlay(this)">
-                    <img src="images/cotizador.png" class="card-img" alt="...">
-                    <a href="proyecto-cotizador/index.html" class="card-img-overlay d-none text-decoration-none text-white text-center" style="background-color: rgba(87, 98, 119, 0.35);">
-                      <h5 class="mt-4 card-title">Cotizador de Seguros</h5>
-                      <span class="badge rounded-pill bg-dark">
-                          <i class="bi bi-link-45deg"></i>
-                      </span>
-                    </a>
+                    </div>
                 </div>
-            </div>
 
-
-            <div class="col-md-4 col-sm-12">
-                <div class="portfolio-overlay card text-white shadow p-3 mb-5 bg-body rounded" onmouseover="visibleOverlay(this)">
-                    <img src="images/local-tw.png" class="card-img" alt="...">
-                    <a href="proyecto-tw-localStorage/index.html" class="card-img-overlay d-none text-decoration-none text-white text-center" style="background-color: rgba(87, 98, 119, 0.35);">
-                      <h5 class="mt-4 card-title">Twitter Local Storage</h5>
-                      <span class="badge rounded-pill bg-dark">
-                          <i class="bi bi-link-45deg"></i>
-                      </span>
-                    </a>
+                <div class="col-md-4 col-sm-12">
+                    <div class="portfolio-overlay card shadow p-3 mb-5 bg-body rounded" onmouseover="visibleOverlay(this)">
+                        <img src="images/buscador-autos.png" class="card-img" alt="...">
+                        <a href="proyecto-buscador/index.html" class="card-img-overlay d-none text-decoration-none text-white text-center" style="background-color: rgba(87, 98, 119, 0.35);">
+                        <h5 class="mt-4 card-title">Buscador de Autos</h5>
+                        <span class="badge rounded-pill bg-dark">
+                            <i class="bi bi-link-45deg"></i>
+                        </span>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
+
+                <div class="col-md-4 col-sm-12">
+                    <div class="portfolio-overlay card text-white shadow p-3 mb-5 bg-body rounded" onmouseover="visibleOverlay(this)">
+                        <img src="images/cotizador.png" class="card-img" alt="...">
+                        <a href="proyecto-cotizador/index.html" class="card-img-overlay d-none text-decoration-none text-white text-center" style="background-color: rgba(87, 98, 119, 0.35);">
+                        <h5 class="mt-4 card-title">Cotizador de Seguros</h5>
+                        <span class="badge rounded-pill bg-dark">
+                            <i class="bi bi-link-45deg"></i>
+                        </span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 col-sm-12">
+                    <div class="portfolio-overlay card text-white shadow p-3 mb-5 bg-body rounded" onmouseover="visibleOverlay(this)">
+                        <img src="images/local-tw.png" class="card-img" alt="...">
+                        <a href="proyecto-tw-localStorage/index.html" class="card-img-overlay d-none text-decoration-none text-white text-center" style="background-color: rgba(87, 98, 119, 0.35);">
+                        <h5 class="mt-4 card-title">Twitter Local Storage</h5>
+                        <span class="badge rounded-pill bg-dark">
+                            <i class="bi bi-link-45deg"></i>
+                        </span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 
     
 
     <script>
+
+        document.addEventListener("DOMContentLoaded", ()=>{
+            const loadDiv= document.querySelector("#loading");
+            const bodyContent = document.querySelector("#content-body");
+            const body = document.querySelector("body");
+            console.log(body);
+
+            setTimeout(() => {
+                body.classList.remove("bg-init");
+                bodyContent.classList.remove("d-none");
+
+                // loadDiv.classList.add("d-none");
+                loadDiv.remove();
+            }, 3000);
+        })
 
         function visibleOverlay(e){
             const aTag =e.children[1]; 
