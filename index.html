@@ -6,18 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"> 
     <title>Home - JS-Practices</title>
 </head>
+<style>
+
+@media (max-width: 600px) {
+  header {
+      height: 230px !important;
+  }
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+header {
+  position: relative;
+  height: 400px;
+  background: rgb(252,179,69);
+  background: linear-gradient(45deg, rgba(252,179,69,1) 8%, rgba(249,255,0,1) 100%);
+}
+
+header h1 {
+  color: white;
+}
+
+svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+section {
+  margin: 5% 10%;
+}
+</style>
 <body>
 
-    <div class="d-flex justify-content-center mt-5 mb-3">
-        <h1>JS-Practices</h1>
-    </div>
+    <header>
+        <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="-300 0 950 270" >
+          <path d="M-314,267 C105,364 400,100 812,279" fill="none" stroke="white" stroke-width="120" stroke-linecap="round"/>
+        </svg>
 
+        <div class="row d-flex justify-content-center">
+            <div class="alert alert-light float-end shadow p-3 mb-3 mt-3 bg-body rounded d-flex me-3 w-75" role="alert">
+                <img src="images/logo-index.jpeg" width="60px" height="48px" alt="" srcset="">
+                <span class="p-2">Hola visitante!</span>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-5 mb-3">
+            <h1 style="font-family: 'Anton', sans-serif;">JS-Practices</h1>
+
+        </div>
+    
+      </header>
+    
     <div class="container">
-        <div class="row mt-5">
+        <div class="row">
             <div class="col-md-4 col-sm-12">
-                <div class="portfolio-overlay card bg-dark text-white mb-3" onmouseover="visibleOverlay(this)">
+                <div class="portfolio-overlay card text-white shadow p-3 mb-5 bg-body rounded" onmouseover="visibleOverlay(this)">
                     <img src="images/presupuesto.png" class="card-img" alt="...">
                     <a href="proyecto-presupuesto/index.html" class="card-img-overlay d-none text-decoration-none text-white text-center" style="background-color: rgba(87, 98, 119, 0.35);">
                       <h5 class="mt-4 card-title">Administrador de Gastos</h5>
@@ -25,11 +80,12 @@
                           <i class="bi bi-link-45deg"></i>
                       </span>
                     </a>
+
                 </div>
             </div>
 
             <div class="col-md-4 col-sm-12">
-                <div class="portfolio-overlay card bg-dark text-white mb-3" onmouseover="visibleOverlay(this)">
+                <div class="portfolio-overlay card shadow p-3 mb-5 bg-body rounded" onmouseover="visibleOverlay(this)">
                     <img src="images/buscador-autos.png" class="card-img" alt="...">
                     <a href="proyecto-buscador/index.html" class="card-img-overlay d-none text-decoration-none text-white text-center" style="background-color: rgba(87, 98, 119, 0.35);">
                       <h5 class="mt-4 card-title">Buscador de Autos</h5>
@@ -42,7 +98,7 @@
 
 
             <div class="col-md-4 col-sm-12">
-                <div class="portfolio-overlay card bg-dark text-white mb-3" onmouseover="visibleOverlay(this)">
+                <div class="portfolio-overlay card text-white shadow p-3 mb-5 bg-body rounded" onmouseover="visibleOverlay(this)">
                     <img src="images/cotizador.png" class="card-img" alt="...">
                     <a href="proyecto-cotizador/index.html" class="card-img-overlay d-none text-decoration-none text-white text-center" style="background-color: rgba(87, 98, 119, 0.35);">
                       <h5 class="mt-4 card-title">Cotizador de Seguros</h5>
@@ -55,7 +111,7 @@
 
 
             <div class="col-md-4 col-sm-12">
-                <div class="portfolio-overlay card bg-dark text-white mb-3" onmouseover="visibleOverlay(this)">
+                <div class="portfolio-overlay card text-white shadow p-3 mb-5 bg-body rounded" onmouseover="visibleOverlay(this)">
                     <img src="images/local-tw.png" class="card-img" alt="...">
                     <a href="proyecto-tw-localStorage/index.html" class="card-img-overlay d-none text-decoration-none text-white text-center" style="background-color: rgba(87, 98, 119, 0.35);">
                       <h5 class="mt-4 card-title">Twitter Local Storage</h5>
@@ -68,6 +124,8 @@
 
         </div>
     </div>
+
+    
 
     <script>
 
@@ -92,5 +150,6 @@
             
         }
     </script>
+
 </body>
 </html>
